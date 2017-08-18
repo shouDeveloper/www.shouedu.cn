@@ -5,6 +5,22 @@ body,ul,li,div,p,header,nav,span{
 	margin: 0;
 }
 
+.alert {
+    position: fixed;
+    width: 300px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0px 0px 3px 1px rgba(147, 147, 147, 0.10);
+    top: calc(100vh / 2 - 130px);
+    left: calc(100vw / 2 - 150px);
+}
+
+.alert>.sorry {
+    text-align: center;
+}
+.alert>.timer>span {
+    color: red;
+}
 header{
 	width: 100%;
 	height: 70px;

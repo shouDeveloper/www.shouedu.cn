@@ -30,6 +30,13 @@
 </head>
 
 <body>
+    <div class="alert">
+        <div class="sorry">抱歉，海大新媒体小程序已停止维护，有兴趣的学弟学妹可以接手</div>
+        <div class="timer">
+            <span>5s</span> 后进入
+            <a href="http://dev.shouedu.cn">海大开发者官网<a>
+        </div>
+    </div>
     <header>
         <div class="logo-c center">
             <img class="logo" src="http://oo4y79ovc.bkt.clouddn.com/%E8%B5%84%E6%BA%90%201.svg" alt="海大新媒体logo">
@@ -87,5 +94,18 @@
         <br/> 本网页不做后续维护（页面信息可能不会更新）有兴趣的朋友可以<a href="https://github.com/shouDeveloper/www.shouedu.cn">提交</a>更新代码给我。
     </div>
 </body>
-
+<script>
+    (function () {
+        var timer = document.querySelector('.timer>span')
+        var i = 5
+        var interval = setInterval(function () {
+            i --
+            timer.innerText = i + 's'
+            if (i === 0){
+                clearInterval(interval)
+                window.location.href = "http://dev.shouedu.cn"
+            }
+        }, 1000)
+    })()
+</script>
 </html>
